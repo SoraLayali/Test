@@ -1,7 +1,19 @@
+var yPos = 0;
+
 function setup(){
-	createCanvas(200,200);
+	createCanvas(2000,2000);
 }
 
 function draw(){
-	rect(50,50,20,20);
+
+	if(yPos > screen.height){
+		yPos = 0;
+	}
+	background(50, 155, 255);
+		fill(204, 101, 32);
+		stroke(127, 63, 120);
+		rect(400, yPos, 200, 200);
+		rotate(45);
+		rect(400, yPos, 200, 200);
+	++yPos;
 }
